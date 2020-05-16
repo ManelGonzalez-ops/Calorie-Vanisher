@@ -40,7 +40,7 @@ const App = (function (ItemCtrl, UICtrl, StorageCtrl) {
       const newItem = ItemCtrl.addItem(input.name, input.calories);
 
       const itemGood = newItem.obtainObject()
-      console.log(itemGood)
+      
 
       StorageCtrl.updateStorage(itemGood)
 
@@ -98,7 +98,7 @@ const App = (function (ItemCtrl, UICtrl, StorageCtrl) {
 
 
         const cambiar = ItemCtrl.getItems()
-        console.log(cambiar)
+        
         let listaActualizada = []
         cambiar.forEach(item => {
           if (item.id === currentElement.id) {
@@ -147,7 +147,7 @@ const App = (function (ItemCtrl, UICtrl, StorageCtrl) {
 
         UICtrl.clearInput();
         UICtrl.clearEditState()
-        console.log(ItemCtrl.getItems())
+       
 
         const calories = ItemCtrl.getTotalCalories()
         UICtrl.showTotalCalories(calories)
@@ -160,11 +160,11 @@ const App = (function (ItemCtrl, UICtrl, StorageCtrl) {
 
   const removeEverything = function () {
     const dataStructure = ItemCtrl.logData()
-    console.log(dataStructure)
+    
     dataStructure.items = []
     dataStructure.totalCalories = 0
-    console.log()
-    console.log(dataStructure)
+   
+    
     //const lista = document.getElementById("item-list")
     let elementos = document.querySelectorAll(".collection-item")
     //elementos.forEach(item => lista.removeChild(item))
